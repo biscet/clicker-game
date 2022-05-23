@@ -1,0 +1,101 @@
+@import '@styles/tokens.scss';
+
+.game-bar {
+  width: 350px;
+  height: 85%;
+  border: $PrimaryBorder;
+  background: $PrimaryCardBg;
+  box-sizing: border-box;
+  padding: 16px;
+
+  &__body {
+    height: 90%;
+    margin-top: 16px;
+    overflow: auto;
+
+    .body-card {
+      position: relative;
+      width: 100%;
+      min-height: 100px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      border: $PrimaryBorder;
+      background: $SecondaryCardBg;
+      margin-bottom: 16px;
+      cursor: pointer;
+
+      &__title {
+        font-size: 10px;
+        margin-bottom: 10px;
+        color: red;
+      }
+
+      &__info {
+        font-size: 10px;
+      }
+
+      img {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        right: 10px;
+        top: 11px;
+        box-sizing: border-box;
+        border: $PrimaryBorder;
+        background: $PrimaryCardBg;
+        pointer-events: none;
+      }
+
+      &__need-lvl {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: gray;
+        background: rgba(0, 0, 0, 0.85);
+        cursor: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .bar-navigation {
+      position: relative;
+      width: 55px;
+      height: 45px;
+      box-sizing: border-box;
+      border: $PrimaryBorder;
+      background: $SecondaryCardBg;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &--active {
+        svg {
+          g {
+            fill: $PrimaryYellow;
+          }
+        }
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}

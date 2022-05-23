@@ -1,0 +1,42 @@
+{
+  "name": "clicker",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Egor Prokhorov",
+  "license": "MIT",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.4.3",
+    "classnames": "^2.3.1",
+    "effector": "^22.3.0",
+    "effector-easy-router": "^0.0.8",
+    "effector-localstorage": "^0.5.3",
+    "effector-react": "^22.0.6",
+    "patronum": "^1.8.2",
+    "prettier": "^2.6.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hot-loader": "^4.13.0",
+    "react-scripts": "4.0.0",
+    "sass": "1.49.9"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-optional-chaining": "^7.8.3",
+    "@babel/runtime": "^7.17.9"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

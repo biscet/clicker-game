@@ -1,0 +1,57 @@
+@import '@styles/tokens.scss';
+
+.render-game {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px;
+  user-select: none;
+
+  //bg арена
+  background-image: url('../../assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .side-right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .side-center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .side-left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.button-clicked {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.version {
+  position: fixed;
+  font-size: 8px;
+  right: 10px;
+  bottom: 10px;
+}

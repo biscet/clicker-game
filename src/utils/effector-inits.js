@@ -1,0 +1,5 @@
+import '@models/opponent/init.js'
+import '@models/player/init.js'
+import '@models/engine/game-bar/game-bar-init.js'
+import '@models/abilitys/init.js'
+import '@models/esc-modal/init.js'

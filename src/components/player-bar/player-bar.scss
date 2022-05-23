@@ -1,0 +1,26 @@
+@import '@styles/tokens.scss';
+
+.player-bar {
+  width: 250px;
+  height: 115px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: $PrimaryBorder;
+  background: $PrimaryCardBg;
+  font-size: 12px;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stats {
+    position: relative;
+    top: 5px;
+
+    &__field {
+      font-size: 10px;
+      margin: 5px 0px 0px 0px;
+    }
+  }
+}
