@@ -1,12 +1,48 @@
 {
   "name": "clicker",
-  "version": "1.0.0",
-  "main": "src/index.js",
+  "version": "0.6.0",
+  "main": "public/electron.js",
   "author": "Egor Prokhorov",
+  "productName": "Clicker Game",
+  "homepage": "./",
   "license": "MIT",
   "scripts": {
-    "start": "craco start",
-    "build": "craco build"
+    "dev:react": "craco start",
+    "build": "craco build",
+    "dev": "concurrently -k \"BROWSER=none yarn dev:react\" \"yarn:electron\"",
+    "electron": "wait-on tcp:3000 && electron .",
+    "start-electron": "export ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "package": "electron-builder build --mac --win -c.extraMetadata.main=build/electron.js --publish never",
+    "publish": "electron-builder build --mac --win --publish always"
+  },
+  "build": {
+    "mac": {
+      "publish": {
+        "provider": "github",
+        "owner": "Egor Prokhorov",
+        "repo": "Clicker Game",
+        "private": true,
+        "token": ""
+      }
+    },
+    "win": {
+      "publish": {
+        "provider": "github",
+        "owner": "Egor Prokhorov",
+        "repo": "Clicker Game",
+        "private": true,
+        "token": ""
+      }
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "publish": {
+      "provider": "github",
+      "private": true,
+      "owner": "Egor Prokhorov"
+    }
   },
   "dependencies": {
     "@craco/craco": "^6.4.3",
@@ -21,11 +57,16 @@
     "react-dom": "17.0.2",
     "react-hot-loader": "^4.13.0",
     "react-scripts": "4.0.0",
-    "sass": "1.49.9"
+    "sass": "1.49.9",
+    "wait-on": "^7.0.1"
   },
   "devDependencies": {
     "@babel/plugin-syntax-optional-chaining": "^7.8.3",
-    "@babel/runtime": "^7.17.9"
+    "@babel/runtime": "^7.17.9",
+    "concurrently": "^7.6.0",
+    "electron": "^23.1.2",
+    "electron-builder": "^23.6.0",
+    "electron-is-dev": "^2.0.0"
   },
   "browserslist": {
     "production": [
