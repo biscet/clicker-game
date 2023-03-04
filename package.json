@@ -6,6 +6,9 @@
   "productName": "Clicker Game",
   "homepage": "./",
   "license": "MIT",
+  "engines": {
+    "node": "18.10.0"
+  },
   "scripts": {
     "dev:react": "craco start",
     "build": "craco build",
