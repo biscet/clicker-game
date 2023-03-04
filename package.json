@@ -6,12 +6,9 @@
   "productName": "Clicker Game",
   "homepage": "./",
   "license": "MIT",
-  "engines": {
-    "node": "18.10.0"
-  },
   "scripts": {
     "dev:react": "craco start",
-    "build": "craco build",
+    "build": "craco build --openssl-legacy-provider",
     "dev": "concurrently -k \"BROWSER=none yarn dev:react\" \"yarn:electron\"",
     "electron": "wait-on tcp:3000 && electron .",
     "start-electron": "export ELECTRON_START_URL=http://localhost:3000 && electron .",
